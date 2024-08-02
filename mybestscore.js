@@ -73,4 +73,12 @@ function parseScore(li){
 }
 
 var difficultySet = new Set();
-await getBestScores();
+var arr = await getBestScores();
+var arr2 = [];
+arr.forEach((e) => {
+    console.log(typeof(e))
+    console.log(e)
+    arr2.push(`${e['song']} ${e['style']}${e['diff']} ${e['score']} ${e['grade']} ${e['plate']}\n`)
+})
+
+alert(arr2);
