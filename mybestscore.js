@@ -33,9 +33,10 @@ async function getBestScores(){
             jobs.push(parseBestScorePage(baseurl, difficulty, page));
         }
         let results = await Promise.all(jobs);
-        scores = results.flat(1);
-        scores.push(Array.from(difficultySet));
+        scores.push(results.flat(1));
+        scores = scores.flat(1);
     }
+    scores.push(Array.from(difficultySet));
     console.log("Done!");
     return scores;
 }
