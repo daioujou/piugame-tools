@@ -85,4 +85,4 @@ async function mybestscore() {
     alert(arr2);
 }
 
-await mybestscore();
+mybestscore();
