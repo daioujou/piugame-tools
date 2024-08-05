@@ -75,7 +75,7 @@ async function mybestscore() {
 
     var difficultySet = new Set();
     var scores = await getBestScores();
-    window.document.write(JSON.stringify(arr));
+    window.document.write(JSON.stringify(scores));
 }
 
 mybestscore();
