@@ -74,15 +74,8 @@ async function mybestscore() {
     }
 
     var difficultySet = new Set();
-    var arr = await getBestScores();
-    arr.pop();
-    var arr2 = [];
-    arr.forEach((e) => {
-        arr2.push(`${e['song']} ${e['style']}${e['diff']} ${e['score']} ${e['grade']} ${e['plate']}\n`)
-    })
-
-
-    alert(arr2);
+    var scores = await getBestScores();
+    window.document.write(JSON.stringify(arr));
 }
 
 mybestscore();
